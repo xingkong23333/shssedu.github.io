@@ -915,6 +915,9 @@ h3 {
   .header-area .main-header-area .logo img {
     width: 30%;
   }
+  .xiaoxun h3{
+    font-size: 39px;
+  }
 }
 
 @media (min-width: 768px) and (max-width: 991px) {

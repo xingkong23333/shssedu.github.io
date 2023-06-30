@@ -916,7 +916,7 @@ h3 {
     width: 30%;
   }
   .xiaoxun h3{
-    font-size: 39px;
+    font-size: 39px!important;
   }
 }
 

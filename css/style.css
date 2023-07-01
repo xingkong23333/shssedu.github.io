@@ -1321,8 +1321,11 @@ h3 {
 }
 
 /* line 1, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_slider.scss */
-.slider_bg_1 {
+/* .slider_bg_1 {
   background-image: url(../img/banner/shss0.jpeg);
+} */
+.slider_bg_1 {
+  background-image: url(https://www.sdu.edu.cn/images/2023062701-1500.jpg);
 }
 
 /* line 4, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_slider.scss */

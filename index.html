@@ -393,7 +393,11 @@
                     <div class="col-lg-7">
                         <div class="admission_form">
                             <h3>留言板</h3>
-                            <form action="mailto:admin@shssedu.ac.cn" method="get" enctype="text/plain"
+                            <script src="https://utteranc.es/client.js" repo="SHSSEDU/message-board"
+                                issue-term="pathname" label="留言" theme="preferred-color-scheme" crossorigin="anonymous"
+                                async>
+                                </script>
+                            <!-- <form action="mailto:admin@shssedu.ac.cn" method="get" enctype="text/plain"
                                 class="row g-3 needs-validation" novalidate accept-charset="UTF-8">
                                 <div class="col-md-6">
                                     <label for="name" class="form-label">呢称</label>
@@ -427,7 +431,7 @@
                                 <div class="col-12">
                                     <button class="btn btn-primary" type="submit">提交</button>
                                 </div>
-                            </form>
+                            </form> -->
                         </div>
                     </div>
                 </div>
@@ -690,12 +694,14 @@
                 <div class="row">
                     <div class="col-xl-12 copyright" style="text-align: center;">
                         <img src="https://count.getloli.com/get/@:shssedu" alt=":name" /><br>
-                        <a href="https://www.cloudflare.com/zh-cn/" target="blank" title="感谢cloudflare提供CDN加速及Pages服务！" ><img
-                                alt="cloudflare"
-                                src="https://cdn.chuqis.com/gh/muzihuaner/huancdn@main/img/cloudflare.svg"
-                                width="100" style="margin: 10px;"> <br>
-                            <a href="https://cdn.onmicrosoft.cn/" target="blank" title="感谢渺软公益 CDN提供CDN加速服务！" style="background-color: azure;background-size: cover;">
-                                <img src="https://cdn.onmicrosoft.cn/favicon.svg" alt="" srcset="" width="20px" height="20px">渺软公益 CDN</a>
+                        <a href="https://www.cloudflare.com/zh-cn/" target="blank"
+                            title="感谢cloudflare提供CDN加速及Pages服务！"><img alt="cloudflare"
+                                src="https://cdn.chuqis.com/gh/muzihuaner/huancdn@main/img/cloudflare.svg" width="100"
+                                style="margin: 10px;"> <br>
+                            <a href="https://cdn.onmicrosoft.cn/" target="blank" title="感谢渺软公益 CDN提供CDN加速服务！"
+                                style="background-color: azure;background-size: cover;">
+                                <img src="https://cdn.onmicrosoft.cn/favicon.svg" alt="" srcset="" width="20px"
+                                    height="20px">渺软公益 CDN</a>
                             <p class="copy_right text-center">
 
                                 <a href="https://icp.gov.moe/?keyword=20230689" target="_blank">萌ICP备20230689号</a>
@@ -716,11 +722,11 @@
     <script>
         var currentDomain = window.location.hostname;
         if (currentDomain !== 'shssedu.ac.cn') {
-          setTimeout(function() {
-            window.location.href = 'https://shssedu.ac.cn';
-          }, 5000); // 延迟5秒跳转
+            setTimeout(function () {
+                window.location.href = 'https://shssedu.ac.cn';
+            }, 5000); // 延迟5秒跳转
         }
-        </script>
+    </script>
 
     <!-- JS here -->
     <script

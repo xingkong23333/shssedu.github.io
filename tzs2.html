@@ -4,14 +4,22 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>山河大学概述-山河大学</title>
+    <title>录取通知书-山河大学</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+		input{
+			width: 200px;
+		}
+		h5{
+			font-weight: bold;
+		}
 
+	</style>
     <!-- <link rel="manifest" href="site.webmanifest"> -->
     <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
     <!-- Place favicon.ico in the root directory -->
-
+    <script src="https://cdnjs.quickso.cn/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <!-- CSS here -->
     <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/css/owl.carousel.min.css">
@@ -71,8 +79,7 @@
                                                 <li><a href="/">概况</a></li>
                                                 <li><a href="#">招生就业<i class="ti-angle-down"></i></a>
                                                     <ul class="submenu">
-                                                        <li><a href="#">招生</a></li>
-                                                        <li><a href="#">奖助学金</a></li>
+                                                        <li><a href="/zsjy/zs.html">招生</a></li>
                                                         <li><a href="#">就业指导</a></li>
 
                                                     </ul>
@@ -161,14 +168,23 @@
     <section class="contact-section">
             <div class="container">
                 <div class="pb-4">
-                    <p><b>山河大学（英语：Shanhe University，缩写：SHSSEDU） </b>全国首个大学生虚拟自办大学。 山河大学并不是一所实际意义上的大学，而是由山河四省（河北、河南、山东、山西）的学子们汇聚意念共同形成的一种意志和向往，起源于2023年左右，该校因河北、河南、山东、山西四省高等教育资源不足而建立。</p>
-                </div>
-                <div class="d-none d-sm-block mb-5 pb-4">
-                    <div id="map" style="height: 420px; position: relative; overflow: hidden;display:flex ;">
-                    <img src="/img/map.png" alt="" srcset="" class="mb-6" style="width: 500px;">
-                    <img src="/img/original.jpg" alt="" class="mb-6">
-                        
-                    </div>
+                    <pre>
+                        <canvas style="background-color: #fff;" id="myCanVas" width="600px" height="843px">不好意思！！您的浏览器不支持canvas标签</canvas>
+                    </pre>
+                    
+                        <pre>
+                    <h5>自定义选项</h5>
+                    <!-- <input type="name" placeholder="请输入证书名称,比如荣誉证书" id="name"> -->
+                    <input type="text" placeholder="请输入姓名，比如XX同学" id="text" >
+                    请输入专业:
+                    <input type="text" id="prize">
+                    请输入日期：
+                    <input type="date" id="day">
+                    <input type="button" value="点击获取" id="submit">
+                    <button onclick="exportCanvasAsPNG('myCanVas','E-Cert')">保存图片</button>
+                    </pre>
+                        <script type="text/javascript" src="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/js/script.js"></script>
+                    
                     
     
                 </div>

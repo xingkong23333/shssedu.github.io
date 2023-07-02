@@ -1,0 +1,102 @@
+/* Add here all your css styles (customizations) */
+
+.banner {
+	background-image: url(../images/zmmk/banner.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	height: 500px;
+	width: 100%;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-color: #BF1E2E;
+}
+
+.part1 {
+	background-color: #BF1E2E;
+	color: #FFFFFF;
+	width: 100%;
+	text-align: left;
+	padding-bottom: 20px;
+}
+
+.part1 .intr {
+	width: 1000px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+}
+
+.intr p {
+	text-indent: 2em;
+	margin-bottom: 10px;
+}
+
+.intr .r {
+	text-align: right;
+	font-size: 16px;
+	padding-top: 10px;
+	padding-right: 10px;
+}
+
+.part2 {
+	width: 100%;
+	background-image: url(../images/zmmk/bg_title.jpg);
+	background-repeat: repeat-x;
+	background-position: left top;
+	height: 123px;
+	line-height: 123px;
+	color: #FFFFFF;
+	font-size: 40px;
+}
+
+.part2 .title {
+	width: 1000px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	background-image: url(../images/zmmk/title.jpg);
+	background-repeat: no-repeat;
+	background-position: center top;
+	color: #FAE038;
+}
+
+.part3 {
+	background-color: #460000;
+	width: 100%;
+	color: #FFFFFF;
+}
+
+.info {
+	width: 1000px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	padding-top: 30px;
+	padding-bottom: 30px;
+	text-align: left;
+}
+
+.info p {
+	margin-bottom: 20px;
+}
+
+.info a {
+	color: #FFFFFF;
+	text-decoration: underline;
+}
+
+.info p span {
+	width: 250px;
+	display: inline-block;
+}
+
+.zb {
+	text-align: center;
+	padding-top: 40px;
+	padding-bottom: 40px;
+}

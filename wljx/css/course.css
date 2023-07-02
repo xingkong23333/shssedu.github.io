@@ -1,0 +1,172 @@
+/* 分类列表样式 */
+.sort-type-l {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+  
+  .sort-type-i {
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background-color: #007bff;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+    color: #333;
+    transition: background-color 0.2s ease;
+  }
+  .sort-type-i a{
+    color: #fff;
+  }
+  
+  .sort-type-i:hover,
+  .sort-type-i.active {
+    background-color: #ff0000;
+    color: #fff;
+  }
+  
+  /* 课程列表样式 */
+  .icourse-course {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 3px;
+    overflow: hidden;
+  }
+  
+  .icourse-course-thumb {
+    position: relative;
+    display: block;
+    overflow: hidden;
+  }
+  
+  .icourse-course-thumb img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  
+  .icourse-course-thumb .icourse-course-tip {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    font-size: 12px;
+    padding: 5px;
+  }
+  
+  .icourse-course-info {
+    padding: 10px;
+  }
+  
+  .icourse-course-title {
+    font-size: 16px;
+    font-weight: bold;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+  
+  .icourse-course-desc {
+    font-size: 14px;
+    margin: 0;
+    margin-bottom: 10px;
+    color: #666;
+  }
+  
+  .icourse-course-meta {
+    font-size: 12px;
+    color: #999;
+  }
+  
+  .icourse-course-meta span {
+    margin-right: 10px;
+  }
+  
+  
+  /* “查看更多”按钮样式 */
+  .icourse-bottom-seemorebtn {
+    display: block;
+    width: 120px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    margin: 20px auto;
+    background-color: #337ab7;
+    color: #fff;
+    border-radius: 3px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background-color 0.2s ease;
+  }
+  
+  .icourse-bottom-seemorebtn:hover {
+    background-color: #286090;
+  }
+
+  .icourse-open-list > li {
+    width: 236px;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    float: left;
+}
+.icourse-img {
+    height: 134px;
+    position: relative;
+    border: 1px solid #e4e4e4;
+}
+.icourse-type {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.icourse-img > a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.icourse-img > a img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    background: none;
+    border: none;
+    transition: all .3s;
+    -moz-transition: all .3s;
+    -webkit-transition: all .3s;
+    -o-transition: all .3s;
+}
+.icourse-desc {
+    height: 170px;
+    color: #333;
+    font-size: 12px;
+    background-color: #ffffff;
+    border: 1px solid #e4e4e4;
+    border-top: none;
+    padding: 3px 12px;
+}
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+#loadTypeData{
+    display: none;
+}
+.icourse-study-mooc {
+  display: block;
+  display: inline-block;
+  padding-left: 15px;
+  background: url(https://www.icourses.cn/web/icourse/page/imgs/sort-num.jpg) no-repeat center left;
+}
+.icourse-open-list > li.last {
+  margin-right: 0px;
+}
+
+

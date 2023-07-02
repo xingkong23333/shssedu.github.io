@@ -876,7 +876,7 @@ h3 {
 /* line 15, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_header.scss */
 .header-area .main-header-area {
   background: #fff;
-  /* padding: 0 150px; */
+  padding: 0 150px;
   -webkit-box-shadow: 0px 2px 2.94px 0.06px rgba(12, 29, 46, 0.05);
   -moz-box-shadow: 0px 2px 2.94px 0.06px rgba(12, 29, 46, 0.05);
   box-shadow: 0px 2px 2.94px 0.06px rgba(12, 29, 46, 0.05);
@@ -3450,7 +3450,7 @@ h3 {
   content: '';
   background-size: cover;
   background-position: center center;
-  background-image: url(../img/causes/2.png);
+  background-image: url(https://www.westlake.edu.cn/campuslife/clubs/201912/W020200618624327679383.jpg);
 }
 
 @media (max-width: 767px) {
@@ -3619,7 +3619,7 @@ h3 {
   content: '';
   background-size: cover;
   background-position: center center;
-  background-image: url(../img/admission/2.png);
+  background-image: url(https://www.westlake.edu.cn/campuslife/yungu/202212/W020221205545618848463.png);
 }
 
 @media (max-width: 767px) {

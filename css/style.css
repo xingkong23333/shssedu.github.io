@@ -1254,14 +1254,14 @@ h3 {
   }
 }
 
-@media (min-width: 1200px) and (max-width: 1500px) {
+@media (min-width: 1274px) and (max-width: 1500px) {
   /* line 245, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_header.scss */
   .header-area .header-top_area {
     padding: 11px 50px;
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1274px) {
   /* line 260, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_header.scss */
   .header-area .header-top_area .header_top_wrap {
     display: block !important;
@@ -6824,4 +6824,31 @@ h6 {
 }
 .gift__img{
   width: 100px;
+}
+.droplang{
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  padding: 12px 16px;
+}
+#lang1:hover .droplang{
+  display: block;
+}
+.droplang a{
+  display: block;
+  width: 100%;
+  color: rgba(0,0,0,.87);
+  text-align: center;
+  padding-bottom: 4px;
+  padding-top: 4px;
+  font-size: 1rem !important;
+  cursor: pointer;
+  margin: 0px;
+}
+.droplang a:hover{
+  outline: 0;
+  background-color: #eee;
+  color: #6557d2 !important;
 }

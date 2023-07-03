@@ -913,7 +913,9 @@ h3 {
 @media (max-width: 767px) {
   /* line 32, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_header.scss */
   .header-area .main-header-area .logo img {
-    width: 30%;
+    width: 23px;
+    height: 23px;
+    transform: scale(4);
   }
   .xiaoxun h3{
     font-size: 39px!important;

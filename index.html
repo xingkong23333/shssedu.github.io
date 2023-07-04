@@ -117,8 +117,8 @@
                                             <!--  <img src="https://jsd.onmicrosoft.cn/gh/SHSSEDU/LOGO@main/newlogo/LOGO%20(2).png" alt=""
                                 width="150px" height="150px" style="margin: 10px;"> -->
 
-                                            <img src="https://jsd.onmicrosoft.cn/gh/SHSSEDU/LOGO@main/newlogo/LOGO%20(2).png"
-                                                alt="ShanHe University" width="150px" height="150px" style="margin: 10px;">
+                                        <img src="https://jsd.onmicrosoft.cn/gh/SHSSEDU/LOGO@main/newlogo/LOGO3.png"
+                                            alt="ShanHe University" width="260px" height="auto" style="margin: 10px;">
 
                                         </a>
                                         <!-- <h1 style="display: inline-flex;margin: 0 auto;">SHSSEDU</h1> -->
@@ -919,8 +919,8 @@
                     <div class="col-xl-3 col-md-6 col-lg-3">
                         <div class="footer_widget">
 
-                            <img src="https://jsd.onmicrosoft.cn/gh/SHSSEDU/LOGO@main/newlogo/LOGO%20(2).png" alt="ShanHe University"
-                                width="150px" height="150px" style="margin: 10px;background-color:#fff"">
+                            <img src="https://jsd.onmicrosoft.cn/gh/SHSSEDU/LOGO@main/newlogo/LOGO4.png" alt="ShanHe University"
+                                width="150px" height="150px" style="margin: 10px;">
                         </div>
                     </div>
                     <div class=" col-xl-3 col-md-6 col-lg-3">
@@ -968,18 +968,18 @@
                                 <!-- function which will translate the web page using google translator -->
 
                                 <script type="text/javascript">
-                                    function googleTranslateElementInit() {
-                                        new google.translate.TranslateElement(
-                                            { pageLanguage: 'zh-cn' },
-                                            'google_translate_element'
-                                        );
-                                    }  
+                                    if(!navigator.languages[0].includes("zh")){
+                                        function googleTranslateElementInit() {
+                                            new google.translate.TranslateElement(
+                                                { pageLanguage: navigator.language[0].toLowerCase() },
+                                                'google_translate_element'
+                                            );
+                                        }
+                                        var fscript=document.createElement("script");
+                                        fscript.src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
+                                        document.body.append(fscript)
+                                    }
                                 </script>
-
-                                <!-- Script code for google translator API -->
-                                <script type="text/javascript"
-                                    src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit">
-                                    </script>
                             </div>
                         </div>
                     </div>

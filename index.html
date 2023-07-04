@@ -32,7 +32,62 @@
     <!-- <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/css/responsive.css"> -->
     <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
     <script>LA.init({ id: "K71W9U3CqlLrLH40", ck: "K71W9U3CqlLrLH40" })</script>
-
+    <script>
+        function initSlides(){
+            const slides = document.querySelector('.slides');
+            const slideList = slides.querySelectorAll('li');
+            const dots = document.querySelector('.dots');
+            const dotList = dots.querySelectorAll('li');
+            const prev = document.querySelector('.prev');
+            const next = document.querySelector('.next');
+            let currentSlide = 0;
+            
+            function showSlide(index) {
+                slides.style.transform = `translateX(-${index * 100}%)`;
+                slideList[currentSlide].classList.remove('slide-animation');
+                slideList[index].classList.add('slide-animation');
+                dotList[currentSlide].classList.remove('active');
+                dotList[index].classList.add('active');
+                currentSlide = index;
+            }
+            
+            function nextSlide() {
+                let nextSlide = currentSlide + 1;
+                if (nextSlide >= slideList.length) {
+                    nextSlide = 0;
+                }
+                showSlide(nextSlide);
+            }
+            
+            function prevSlide() {
+                let prevSlide = currentSlide - 1;
+                if (prevSlide < 0) {
+                    prevSlide = slideList.length - 1;
+                }
+                showSlide(prevSlide);
+            }
+            
+            function dotClickHandler(event) {
+                const dot = event.target;
+                if (dot.classList.contains('dot')) {
+                    const index = parseInt(dot.dataset.slide) - 1;
+                    showSlide(index);
+                }
+            }
+            
+            dots.addEventListener('click', dotClickHandler);
+            prev.addEventListener('click', prevSlide);
+            next.addEventListener('click', nextSlide);
+            showSlide(currentSlide);
+        }
+        default_onload=window.onload
+        window.onload = () => {
+            if(default_onload){
+                default_onload()
+            }
+            initSlides()
+        }
+    </script>
     <style>
         .text_wrap p a {
             margin: 10px;
@@ -70,154 +125,76 @@
         }
     
         .carousel {
-            position: relative;
-            width: 100%;
-            max-width: 800px;
-            /* width: 80%; */
-            overflow: hidden;
-            position: relative;
-            min-width: 1250px;
-            margin: 0 auto;
-            z-index: -1;
+    position: relative;
+    overflow: hidden;
+}
+
+    .slides {
+        display: flex;
+        transition: transform 0.5s ease-in-out;
+    }
+    
+    .slides li {
+        flex: 0 0 100%;
+    }
+    
+    .dots {
+        display: flex;
+        justify-content: center;
+        margin: 10px 0;
+    }
+    
+    .dot {
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #ccc;
+        margin: 0 5px;
+        cursor: pointer;
+        transition: background-color 0.5s ease-in-out;
+    }
+    
+    .dot.active {
+        background-color: #333;
+    }
+    
+    .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+        color: #fff;
+        text-decoration: none;
+        opacity: 0.5;
+        transition: opacity 0.5s ease-in-out;
+    }
+    
+    .prev:hover,
+    .next:hover {
+        opacity: 1;
+    }
+    
+    .prev {
+        left: 20px;
+    }
+    
+    .next {
+        right: 20px;
+    }
+    
+    .slide-animation {
+        animation: slide 0.5s ease-in-out forwards;
+    }
+    
+    @keyframes slide {
+        from {
+            transform: translateX(0%);
         }
-
-        .slides {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-            overflow: hidden;
-            position: relative;
+        to {
+            transform: translateX(-100%);
         }
-
-        .slides li {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            opacity: 0;
-            z-index: 1;
-            transition: opacity 0.6s ease;
-        }
-
-        .slides li.active {
-            opacity: 1;
-            z-index: 2;
-        }
-
-        .slides li:last-child {
-            position: relative;
-        }
-
-        .slides li img {
-            width: 100%;
-            height: 400px;
-            object-fit: cover;
-        }
-
-        .caption {
-            position: absolute;
-            bottom: 20px;
-            left: 50%;
-            transform: translateX(-50%);
-            text-align: center;
-            color: #fff;
-        }
-
-        .caption h2 {
-            font-size: 24px;
-            margin-bottom: 10px;
-            color: #fff !important;
-        }
-
-        .caption p {
-            font-size: 16px;
-            margin: 0;
-            color: #fff !important;
-        }
-
-        .dots {
-            list-style: none;
-            padding: 0;
-            margin: 20px 0;
-            text-align: center;
-            position: absolute;
-            bottom: 10px;
-            right: 10px;
-        }
-
-        .dots li {
-            display: inline-block;
-            margin: 0 5px;
-            width: 10px;
-            height: 10px;
-            border-radius: 50%;
-            background-color: #ddd;
-            cursor: pointer;
-        }
-
-        .dots li.active {
-            background-color: #555;
-        }
-
-        .prev,
-        .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 30px;
-            color: #fff;
-            background-color: rgba(0, 0, 0, 0.5);
-            padding: 10px;
-            cursor: pointer;
-            transition: background-color 0.3s ease;
-        }
-
-        .prev:hover,
-        .next:hover {
-            background-color: rgba(0, 0, 0, 0.8);
-        }
-
-        .prev {
-            left: 20px;
-            display: none;
-        }
-
-        .next {
-            right: 20px;
-            display: none;
-        }
-
-        @media screen and (max-width: 768px) {
-            .slides li img {
-                object-fit: cover;
-
-            }
-
-            .slides li img {
-                width: 33.3%;
-                height: 100%;
-            }
-
-            .dots {
-                bottom: 20px;
-                right: 50%;
-                transform: translateX(50%);
-            }
-
-            .prev,
-            .next {
-                font-size: 20px;
-            }
-
-            .caption h2 {
-                display: none;
-            }
-
-            .caption p {
-                display: none;
-            }
-        }
+    }
     
         .lyb {
             height: 260px !important;
@@ -375,37 +352,37 @@
 
     <!-- slider_area_start -->
     <div class="carousel">
-        <ul class="slides">
-            <li>
-                <img src="https://img.onmicrosoft.cn/SHSSEDU/img/banner/shdx.png" alt="欢迎来到山河大学" width="100%">
-                <div class="caption">
-                    <!-- <h2>Slide 1</h2> -->
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
-                </div>
-            </li>
-            <li>
-                <img src="https://img.onmicrosoft.cn/SHSSEDU/img/banner/2023061901.jpg" alt="热烈祝贺2023届毕业生圆满完成学业" width="100%">
-                <div class="caption">
-                    <h2>热烈祝贺2023届毕业生圆满完成学业</h2>
-                    <!-- <p>Nulla facilisi. Sed ut neque in nunc iaculis fringilla.</p> -->
-                </div>
-            </li>
-            <li>
-                <img src="https://www.sdu.edu.cn/images/2023062701-1500.jpg" alt="热烈庆祝中国共产党成立102周年" width="100%">
-                <div class="caption">
-                    <h2>热烈庆祝中国共产党成立102周年</h2>
-                    <!-- <p>Ut consequat sapien sit amet nibh tristique, nec consectetur dui interdum.</p> -->
-                </div>
-            </li>
-        </ul>
-        <ul class="dots">
-            <li class="dot active"></li>
-            <li class="dot"></li>
-            <li class="dot"></li>
-        </ul>
-        <a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
-        <a href="#" class="next"><i class="fa fa-chevron-right"></i></a>
-    </div>
+    <ul class="slides">
+        <li data-slide="1">
+            <img src="https://img.onmicrosoft.cn/SHSSEDU/img/banner/shdx.png" alt="欢迎来到山河大学" width="100%">
+            <div class="caption">
+                <!-- <h2>Slide 1</h2> -->
+                <!-- <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p> -->
+            </div>
+        </li>
+        <li data-slide="2">
+            <img src="https://img.onmicrosoft.cn/SHSSEDU/img/banner/2023061901.jpg" alt="热烈祝贺2023届毕业生圆满完成学业" width="100%">
+            <div class="caption">
+                <h2>热烈祝贺2023届毕业生圆满完成学业</h2>
+                <!-- <p>Nulla facilisi. Sed ut neque in nunc iaculis fringilla.</p> -->
+            </div>
+        </li>
+        <li data-slide="3">
+            <img src="https://www.sdu.edu.cn/images/2023062701-1500.jpg" alt="热烈庆祝中国共产党成立102周年" width="100%">
+            <div class="caption">
+                <h2>热烈庆祝中国共产党成立102周年</h2>
+                <!-- <p>Ut consequat sapien sit amet nibh tristique, nec consectetur dui interdum.</p> -->
+            </div>
+        </li>
+    </ul>
+    <ul class="dots">
+        <li class="dot active" data-slide="1"></li>
+        <li class="dot" data-slide="2"></li>
+        <li class="dot" data-slide="3"></li>
+    </ul>
+    <a href="#" class="prev"><i class="fa fa-chevron-left"></i></a>
+    <a href="#" class="next"><i class="fa fa-chevron-right"></i></a>
+</div>
     
     <script>
         var currentSlide = 0;

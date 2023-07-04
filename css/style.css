@@ -6856,3 +6856,8 @@ h6 {
   background-color: #eee;
   color: #6557d2 !important;
 }
+@media (max-width: 767px){
+  .fxq ul{
+    display: block!important;
+  }
+}

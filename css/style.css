@@ -914,6 +914,7 @@ h3 {
   /* line 32, ../../Arafath/CL/january 2020/243.Education/HTML/scss/_header.scss */
   .header-area .main-header-area .logo img {
     width: 6%;
+    height: auto;
     transform: scale(4);
   }
   .xiaoxun h3{

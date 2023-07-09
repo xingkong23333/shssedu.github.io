@@ -6858,4 +6858,7 @@ h6 {
   .fxq ul{
     display: block!important;
   }
+  .wza-Tool{
+    display: none;
+  }
 }

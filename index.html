@@ -14,10 +14,11 @@
     <link rel="shortcut icon" type="image/x-icon"
         href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/LOGO@main/LOGO-removebg.png">
     <!-- Place favicon.ico in the root directory -->
-
-
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
     <!-- CSS here -->
-    <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/css/bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/css/owl.carousel.min.css">
     <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/css/magnific-popup.css">
     <link rel="stylesheet" href="https://jsd.onmicrosoft.cn/gh/SHSSEDU/shssedu.github.io@main/css/font-awesome.min.css">
@@ -977,15 +978,69 @@
     </footer>
     <!-- footer end  -->
 
+
+<!-- Modal -->
+<div  class="modal fade" id="disclaimerModal" tabindex="-1" role="dialog" aria-labelledby="disclaimerModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="disclaimerModalLabel">网站声明</h5>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <p>在使用本网站前，请您务必仔细阅读并理解本声明。如果您不同意本声明任何内容，请您停止使用本网站。</p>
+          <p>本网站 (shssedu.ac.cn) 、群组、Github项目组 (SHSSEDU) 、Bilibili (SHSSEDU)、微博(SHSSEDU) 是由各位网友组建的仅用于网站搭建技术交流和知识分享的平台。
+            其宗旨是为网友提供高质量的学习资源。
+            本站坚决拥护中国共产党的领导， 部分自媒体为了博取流量利用本网站发表不当言论，进行恶意舆论宣传，我们表示严厉谴责，他们的行为均与本网站无关，请各位网友谨防上当受骗。对于恶意传播本网站内容的行为，我们保留追究其法律责任的权利。
+            本站会继续进行技术交流和知识分享。<br>
+            本站邮箱: admin@shssedu.ac.cn
+        </p>
+        <p>发布日期：2023年7月12日 </p>
+        <p>未经本站正式同意，不得转载该声明 (完整复制除外)</p>
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal" id="disagreeBtn">不同意</button>
+          <button type="button" class="btn btn-primary" id="agreeBtn">同意</button>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script>
+    $(document).ready(function() {
+        var agreed = localStorage.getItem('disclaimerAgreed');
+        if (agreed === 'true') {
+          return;
+        }
+        $('#disclaimerModal').modal('show');
+      });
+      
+      $('#agreeBtn').click(function() {
+        localStorage.setItem('disclaimerAgreed', 'true');
+        location.reload();
+      });
+      
+      $('#disagreeBtn').click(function() {
+        window.close();
+      });
+  </script>
+  
+
+
+
+
+
     <!-- 自动跳转js，开发时关闭，提交时打开 -->
-    <script>
+    <!-- <script>
         var currentDomain = window.location.hostname;
         if (currentDomain !== 'shssedu.ac.cn') {
             setTimeout(function () {
                 window.location.href = 'https://shssedu.ac.cn';
             }, 5000); // 延迟5秒跳转
         }
-    </script>
+    </script> -->
 
     <!-- JS here -->
     <script

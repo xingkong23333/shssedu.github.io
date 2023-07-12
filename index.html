@@ -248,6 +248,15 @@
         #jianbian-qing {
             background-image: linear-gradient(to top, #5ee7df 0%, #b490ca 100%);
         }
+
+        .zhanzhu {
+            margin: 20px;
+            text-align: center;
+        }
+
+        .zhanzhu h4 {
+            color: aliceblue;
+        }
     </style>
 </head>
 
@@ -902,21 +911,18 @@
                                         <a href="./en.html">English</a>
                                     </div>
                                 </div> -->
-                            <div id="google_translate_element"></div>
+                                <div id="google_translate_element"></div>
 
                             <!-- function which will translate the web page using google translator -->
 
+                            <script type="text/javascript"
+                                src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
                             <script type="text/javascript">
-                                if (!navigator.languages[0].includes("zh")) {
-                                    function googleTranslateElementInit() {
-                                        new google.translate.TranslateElement(
-                                            { pageLanguage: navigator.language[0].toLowerCase() },
-                                            'google_translate_element'
-                                        );
-                                    }
-                                    var fscript = document.createElement("script");
-                                    fscript.src = "https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit";
-                                    document.body.append(fscript)
+                                function googleTranslateElementInit() {
+                                    new google.translate.TranslateElement({ pageLanguage: 'zh' }, 'google_translate_element');
+                                }
+                                window.onload = function () {
+                                    googleTranslateElementInit();
                                 }
                             </script>
                         </div>
@@ -940,25 +946,30 @@
                                 src="https://tu.quickso.cn/file/a9d51084e5996507e372d.png"
                                 class="esdHBG ESDAssetsTextCon" tabindex="0" width="100px" alt="适老化无障碍服务"></span>
                         <br>
-                        <a href="https://www.cloudflare.com/zh-cn/" target="blank"
-                            title="感谢cloudflare提供CDN加速及Pages服务！"><img alt="cloudflare"
-                                src="https://cdn.chuqis.com/gh/muzihuaner/huancdn@main/img/cloudflare.svg" width="100"
-                                style="margin: 10px;"> <br>
-                            <a href="https://cdn.onmicrosoft.cn/" target="blank" title="感谢渺软公益 CDN提供CDN加速服务！"
-                                style="color: white;background-size: cover;">
-                                <img src="https://cdn.onmicrosoft.cn/favicon.svg" alt="" srcset="" width="20px"
-                                    height="20px" style="margin-right: 5px;">渺软公益 CDN</a>
-                            <p class="copy_right text-center">
+                        <div class="zhanzhu">
+                            <a href="#">
+                                <h4>❤️ 社区赞助商</h4>
+                            </a>
+                            <a href="https://www.cloudflare.com/zh-cn/" target="blank"
+                                title="感谢cloudflare提供CDN加速及Pages服务！"><img alt="cloudflare"
+                                    src="https://cdn.onmicrosoft.cn/gh/muzihuaner/huancdn@main/img/cloudflare.svg"
+                                    width="100" style="margin: 10px;"> <br>
+                                <a href="https://cdn.onmicrosoft.cn/" target="blank" title="感谢渺软公益 CDN提供CDN加速服务！"
+                                    style="color: white;background-size: cover;">
+                                    <img src="https://cdn.onmicrosoft.cn/favicon.svg" alt="" srcset="" width="20px"
+                                        height="20px" style="margin-right: 5px;">渺软公益 CDN</a>
+                        </div>
+                        <p class="copy_right text-center">
 
-                                <a href="https://icp.gov.moe/?keyword=20230689" target="_blank">萌ICP备20230689号</a>
-                                <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                    Copyright &copy;
-                                    <script>document.write(new Date().getFullYear());</script> SHSSEDU All rights
-                                    reserved
-                                    <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-                                </p>
+                            <a href="https://icp.gov.moe/?keyword=20230689" target="_blank">萌ICP备20230689号</a>
+                        <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                            Copyright &copy;
+                            <script>document.write(new Date().getFullYear());</script> SHSSEDU All rights
+                            reserved
+                            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+                        </p>
 
-                            </p>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -967,14 +978,14 @@
     <!-- footer end  -->
 
     <!-- 自动跳转js，开发时关闭，提交时打开 -->
-    <script>
+    <!-- <script>
         var currentDomain = window.location.hostname;
         if (currentDomain !== 'shssedu.ac.cn') {
             setTimeout(function () {
                 window.location.href = 'https://shssedu.ac.cn';
             }, 5000); // 延迟5秒跳转
         }
-    </script>
+    </script> -->
 
     <!-- JS here -->
     <script
